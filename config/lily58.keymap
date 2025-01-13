@@ -19,7 +19,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 5>, <&to 5>;
+            bindings = <&mo 6>, <&to 6>;
         };
 
         arrowfuncs: arrowfuncs {
@@ -248,92 +248,97 @@
 
         multiply {
             bindings = <&kp ASTERISK>;
-            key-positions = <>;
+            key-positions = <20 32>;
         };
 
         forward-slash {
             bindings = <&kp SLASH>;
-            key-positions = <60>;
+            key-positions = <60 32 46>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <>;
+            key-positions = <19 31>;
         };
 
         subtract {
             bindings = <&kp MINUS>;
-            key-positions = <59>;
+            key-positions = <59 31 45>;
         };
 
         caret-up {
             bindings = <&kp CARET>;
-            key-positions = <>;
+            key-positions = <18 30>;
         };
 
         underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <58>;
+            key-positions = <58 30 44>;
         };
 
         ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <>;
+            key-positions = <22 34>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <61>;
+            key-positions = <61 34 48>;
         };
 
         percent {
             bindings = <&kp PERCENT>;
-            key-positions = <>;
+            key-positions = <17 29>;
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <>;
+            key-positions = <16 28>;
         };
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <>;
+            key-positions = <15 27>;
         };
 
         at {
             bindings = <&kp AT_SIGN>;
-            key-positions = <>;
+            key-positions = <14 26>;
         };
 
         exclamation {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <>;
+            key-positions = <13 25>;
         };
 
         question {
             bindings = <&kp QUESTION>;
-            key-positions = <>;
+            key-positions = <25 37>;
         };
 
         period {
             bindings = <&kp PERIOD>;
-            key-positions = <>;
+            key-positions = <26 38>;
         };
 
         back-slash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <>;
+            key-positions = <27 39>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <>;
+            key-positions = <40 28>;
         };
 
         tilde {
             bindings = <&kp GRAVE>;
-            key-positions = <>;
+            key-positions = <29 41>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <52 55>;
         };
     };
 
@@ -350,11 +355,24 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H   &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                           &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB           &kp Q   &kp W   &kp E   &kp R     &kp T                                            &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F     &kp G                                            &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V     &kp B        &arrowfuncs 0 0    &arrowfuncs 0 0  &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                  &to 1   &kp LALT  &lt 3 SPACE  &kp ENTER          &kp BACKSPACE    &smart_shift  &kp BSPC  &kp RGUI
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        basic {
+            display-name = "basic";
+            bindings = <
+&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                           &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB           &kp Q   &kp W   &kp E   &kp R     &kp T                                            &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F     &kp G                                            &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V     &kp B        &arrowfuncs 0 0    &arrowfuncs 0 0  &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                  &to 0   &kp LALT  &lt 3 SPACE  &kp ENTER          &kp BACKSPACE    &smart_shift  &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -390,11 +408,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans       &trans     &trans     &trans    &trans     &trans
+&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
+&kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
+                                        &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
