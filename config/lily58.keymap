@@ -19,7 +19,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 6>, <&to 6>;
+            bindings = <&mo 7>, <&to 7>;
         };
 
         arrowfuncs: arrowfuncs {
@@ -278,12 +278,12 @@
 
         ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <22 34>;
+            key-positions = <21 33>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <61 34 48>;
+            key-positions = <61 33 47>;
         };
 
         percent {
@@ -359,7 +359,7 @@
 &kp TAB           &kp Q   &kp W   &kp E   &kp R     &kp T                                            &kp Y          &kp U    &kp I      &kp O    &kp P     &kp MINUS
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F     &kp G                                            &kp H          &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V     &kp B        &arrowfuncs 0 0    &arrowfuncs 0 0  &kp N          &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                  &to 1   &kp LALT  &lt 3 SPACE  &smart_shift       &kp ENTER        &kp BACKSPACE  &kp DEL  &kp RGUI
+                                  &to 1   &kp LALT  &lt 3 SPACE  &smart_shift       &lt 4 ENTER      &kp BACKSPACE  &kp DEL  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -409,10 +409,23 @@
             display-name = "Raise";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
+&kp GRAVE   &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                          &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &kp KP_DOT
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
 &kp F7      &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
                                         &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        symbols {
+            display-name = "symbols";
+            bindings = <
+&trans     &trans        &trans         &trans                &trans                 &trans                              &trans          &trans           &trans         &trans  &trans  &trans
+&kp GRAVE  &kp EXCL      &kp PIPE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                              &trans          &trans           &trans         &trans  &trans  &trans
+&kp F1     &kp KP_DOT    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &thick_arrowfunc                    &kp KP_EQUAL    &kp PLUS         &kp KP_MINUS   &trans  &trans  &trans
+&kp F7     &kp QUESTION  &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &thin_arrowfunc   &trans    &trans  &kp UNDERSCORE  &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans  &trans  &trans
+                                        &trans                &trans                 &trans            &trans    &trans  &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
